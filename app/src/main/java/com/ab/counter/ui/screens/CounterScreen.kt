@@ -102,20 +102,22 @@ fun CounterScreen(
                     }
                 }
                 Spacer(modifier = Modifier.height(30.dp))
+
+                Button(
+                    onClick = {
+                        counterViewModel.resetCounter()
+                    },
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+
+                    Text(
+                        text = "Reset",
+                        fontSize = 24.sp
+                    )
+                }
             }
 
-            Button(
-                onClick = {
-                    counterViewModel.resetCounter()
-                },
-                shape = RoundedCornerShape(12.dp)
-            ) {
 
-                Text(
-                    text = "Reset",
-                    fontSize = 24.sp
-                )
-            }
         }
 
 
